@@ -40,14 +40,13 @@ const ptsMap = {
   z: 10,
   _: 0,
 }
-
-/*
- *@param {string, string} word
- *@return {number} totalPts
- */
-
 // time = O(n + m)
 // space = O(n)
+/**
+ * @param {string, string}
+ * @returns {number}
+ *
+ */
 function getWordPts(word, tiles) {
   let totalPts = 0
   const tileMap = {}
@@ -72,8 +71,8 @@ function getWordPts(word, tiles) {
 
   return totalPts
 }
-console.log(getWordPts('cat', 'tmoca')) // Expected 5
-console.log(getWordPts('cat', 'tmoa_')) // Expected 2
+console.log(getWordPts("cat", "tmoca")) // Expected 5
+console.log(getWordPts("cat", "tmoa_")) // Expected 2
 console.log(getWordPts("alligator", "gorila")) // Expected 0
 console.log(getWordPts("alligator", "gorila_____")) // Expected 7
 
