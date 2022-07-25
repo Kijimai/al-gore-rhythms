@@ -3,8 +3,10 @@
 function FreqMap(str) {
   let lower = str.toLowerCase()
   for (const letter of lower) {
-    this[letter] ??= 0
-    this[letter]++
+    if (letter != " ") {
+      this[letter] ??= 0
+      this[letter]++
+    }
   }
 }
 
@@ -16,4 +18,5 @@ function stringCount(str) {
 
 console.log(stringCount("aaaaaa"))
 console.log(stringCount("Beepbbbb"))
+console.log(stringCount("Beepbbbb        "))
 console.log(stringCount())
