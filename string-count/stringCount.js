@@ -7,10 +7,12 @@ function FreqMap(str) {
   }
 }
 
-function stringCount(str) {
+function stringCount(str = "") {
+  if (!str) return null
   let strMap = new FreqMap(str)
   return strMap
 }
 
 console.log(stringCount("aaaaaa"))
 console.log(stringCount("Beep"))
+console.log(stringCount())
