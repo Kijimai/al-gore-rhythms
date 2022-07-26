@@ -10,7 +10,6 @@ function FreqMap(str) {
 }
 
 function isAnagram(str1, str2) {
-  if ((!str1 && str2) || (str1 && !str2)) return false
   if (str1.length !== str2.length) return false
   let str1Lower = str1.toLowerCase()
   let str2Lower = str2.toLowerCase()
