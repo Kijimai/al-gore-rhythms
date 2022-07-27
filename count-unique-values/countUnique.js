@@ -11,7 +11,7 @@
 let startTime = Date.now()
 // 
 // time = O(n)
-// space = O(n)
+// space = O(1)
 // function countUniqueValues(sortedArray) {
 //   let indexOne = 0
 //   let indexTwo = 1
@@ -34,7 +34,7 @@ let startTime = Date.now()
 
 // Solution using a Frequency Map
 // time = O(n)
-// space = O(n)
+// space = O(1)
 
 function countUniqueValues(sortedArray) {
   const numMap = new FreqMap(sortedArray)
