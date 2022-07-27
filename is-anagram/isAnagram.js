@@ -23,12 +23,12 @@ function isAnagram(str1, str2) {
   }
   return true
 }
-
-console.log(isAnagram("", ""), true)
-console.log(isAnagram("Racecar", ""), false)
-console.log(isAnagram("Racecar", "racecar"), true)
-console.log(isAnagram("racecar", "racecar"), true)
-console.log(isAnagram("racecar", "dad"), false)
-console.log(isAnagram("aaz", "zza"), false)
 console.log(isAnagram("anagram", "nagaram"), true)
-console.log(isAnagram("timetwisttext", "texttwisttime"), true)
+// console.log(isAnagram("", ""), true)
+// console.log(isAnagram("Racecar", ""), false)
+// console.log(isAnagram("Racecar", "racecar"), true)
+// console.log(isAnagram("racecar", "racecar"), true)
+// console.log(isAnagram("racecar", "dad"), false)
+// console.log(isAnagram("aaz", "zza"), false)
+// console.log(isAnagram("anagram", "nagaram"), true)
+// console.log(isAnagram("timetwisttext", "texttwisttime"), true)
