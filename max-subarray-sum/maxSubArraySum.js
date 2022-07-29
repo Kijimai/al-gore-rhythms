@@ -30,27 +30,46 @@
 // Sliding window approach
 // time - O(n)
 // space - O(1)
+// function maxSubArraySum(nums, n) {
+//   let maxSum = 0
+//   let tempSum = 0
+//   if (nums.length < n) {
+//     return null
+//   }
+
+//   for (let i = 0; i < n; i++) {
+//     maxSum += nums[i]
+//   }
+//   // console.log('maxsum', maxSum)
+//   tempSum = maxSum
+
+//   for (let i = n; i < nums.length; i++) {
+//     tempSum = tempSum - nums[i - n] + nums[i]
+//     // console.log(tempSum, maxSum)
+//     maxSum = Math.max(maxSum, tempSum)
+//   }
+//   return maxSum
+// }
+
+// Sliding Window v2
+
 function maxSubArraySum(nums, n) {
-  let maxSum = 0
-  let tempSum = 0
-  if (nums.length < n) {
-    return null
-  }
+  let currSum = 0
+  let maxSumSeen = -Infinity
 
-  for (let i = 0; i < n; i++) {
-    maxSum += nums[i]
-  }
-  // console.log('maxsum', maxSum)
-  tempSum = maxSum
+  if(nums.length < n) return null
 
-  for (let i = n; i < nums.length; i++) {
-    tempSum = tempSum - nums[i - n] + nums[i]
-    // console.log(tempSum, maxSum)
-    maxSum = Math.max(maxSum, tempSum)
+  for(let i = 0; i < nums.length; i++) {
+    currSum += nums[i]
+    if (i >= n - 1) {
+      maxSumSeen = Math.max(currSum, maxSumSeen)
+      currSum -= nums[i - (n - 1)]
+    }
   }
-  return maxSum
+  return maxSumSeen
 }
 
 console.log(maxSubArraySum([1, 2, 3, 4, 5, 6, 7], 2)) // 13
 console.log(maxSubArraySum([1, 2, 3], 4)) // null
-console.log(maxSubArraySum([99, 2, 3, 1, 76, 32, 66], 4)) // (1 + 76 + 32 + 66) 175
+console.log(maxSubArraySum([99, 2, 3, 1, 76, 32, 66], 4))
+console.log(maxSubArraySum([99, -2, -3, -1, -76, -32, -66], 4)) // (1 + 76 + 32 + 66) 175
