@@ -28,6 +28,27 @@ function areThereDuplicates(...args) {
 //   return false;
 // }
 
+// Multiple pointers
+// function areThereDuplicates(...args) {
+//   // Two pointers
+//   args.sort((a,b) => a > b);
+//   let start = 0;
+//   let next = 1;
+//   while(next < args.length){
+//     if(args[start] === args[next]){
+//         return true
+//     }
+//     start++
+//     next++
+//   }
+//   return false
+// }
+
+// One Liner
+// function areThereDuplicates() {
+//   return new Set(arguments).size !== arguments.length;
+// }
+
 console.log(areThereDuplicates(1, 2, 3, 4), false)
 console.log(areThereDuplicates("a", "b", "d", 2), false)
 console.log(areThereDuplicates("a", "b", "d", "a"), true)
