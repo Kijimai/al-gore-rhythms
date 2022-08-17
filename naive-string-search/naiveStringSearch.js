@@ -17,3 +17,4 @@ function stringSearch(str, val) {
 }
 
 console.log(stringSearch("wowomgzomg", "zom")) // 1
+console.log(stringSearch("ananakin", "anakin")) // 1
