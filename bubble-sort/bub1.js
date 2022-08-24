@@ -42,7 +42,7 @@ function bubble(arr) {
         swapped = false
       }
     }
-    if (!swapped) break
+    if (swapped) break
   }
   return arr
 }
