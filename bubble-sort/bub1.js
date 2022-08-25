@@ -56,3 +56,35 @@ function swap(arr, idx1, idx2) {
 // console.log(bubble(numArray))
 // console.log(bubble(numArray2))
 console.log(bubble(numArray3))
+
+
+// Other solutions
+
+// function bubbleSort(nums) {
+//   for(let i = 0; i < nums.length; i++){
+//     for(let j = 0; j< nums.length - i - 1; j++) {
+//       if (nums[j] > nums[j+1]){
+//         let temp = nums[j]
+//         nums[j] = nums[j+1]
+//         nums[j+1] = temp
+//       }
+//     }
+//   }
+//   console.log(nums)
+// }
+
+// function bubbleSortRecursive(nums, length = nums.length) {
+//   if (length == 0) {
+//     return nums;
+//   }
+//   for (i = 0; i < length - 1; i++) {
+//     if (nums[i] > nums[i + 1] && i != length - 1) {
+//     let holder = nums[i]
+//       nums[i] = nums[i + 1]
+//       nums[i + 1] = holder 
+//     }
+//   }
+//   return bubbleSort(nums, --length)
+// }
+
+
