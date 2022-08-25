@@ -1,3 +1,5 @@
+// time -- O(n^2)
+
 const numArray = [34, 22, 10, 19, 17]
 
 function selectionSort(arr) {
@@ -10,13 +12,7 @@ function selectionSort(arr) {
       }
     }
     // Swapping only if the value of smallestIndex changed during the loop
-    if (i !== smallestIndex) {
-      console.log("Swapping to:")
-      console.log(i, smallestIndex)
-      swap(arr, smallestIndex, i)
-      console.log("****************")
-      console.log(arr)
-    }
+    if (i !== smallestIndex) swap(arr, smallestIndex, i)
   }
   console.log(arr)
   return arr
