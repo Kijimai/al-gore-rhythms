@@ -41,9 +41,11 @@ function same(arr1, arr2) {
   }
 
   for (let key in freqCount1) {
+    // Check if the key squared exists as a key in the freqCount2 obj
     if (!(key ** 2 in freqCount2)) {
       return false
     }
+    // Check if the frequency counts are the same in both objs
     if (freqCount2[key ** 2] !== freqCount1[key]) {
       return false
     }
